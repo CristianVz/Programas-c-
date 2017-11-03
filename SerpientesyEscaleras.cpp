@@ -70,24 +70,23 @@ void tirar(int vec[], int tamano)
         if (vec[jugador1]>0)
         {
             cout<<"El jugador 1 cayo en una escalera"<<endl;
-            jugador1+=vec[jugador1];
         }
         else if (vec[jugador1]<0)
             cout<<"El jugadro 1 cayo en una Serpiente"<<endl;
-            jugador1+= vec[jugador1];
+           
+        jugador1+= vec[jugador1];
         cout<<"El recorrido del jugador 1:"<<jugador1<<endl;
 
-        jugador2=dado();
+        jugador2+=dado();
 
         if (vec[jugador2]>0)
         {
-            cout<<"El jugador 2 cayo en una escalera"<<endl;
-            jugador2+=vec[jugador2];
+            cout<<"El jugador 2 cayo en una escalera"<<endl;          
         }
         else if (vec[jugador2]<0)
             cout<<"El jugador 2 cayo en una serpiente"<<endl;
-            jugador2+=vec[jugador2];
-
+          
+        jugador2+=vec[jugador2];
         cout<<"El recorrido del jugador 2:"<<jugador2<<endl;
 
     }while(jugador1<tamano && jugador2<tamano);
